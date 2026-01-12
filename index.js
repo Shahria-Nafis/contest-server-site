@@ -12,12 +12,7 @@ dotenv.config();
 
 const app = express();
 
-app.use(cors({
-  origin: [
-    'https://contest-server-site.vercel.app'
-  ],
-  credentials: true
-}));
+app.use(cors());
 app.use(express.json());
 app.use(helmet());
 app.use(morgan('dev'));
